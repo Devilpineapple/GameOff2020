@@ -22,9 +22,14 @@ namespace Data
                 public GameObject prefab;
                 public float size;
             }
-            
+
             public Dimension dimension;
-            public Tile tile;    
+            public Tile tile;
+            public Tile wall;
+            public Tile conveyorBelt;
+            public Tile voidPlatform;
+            public Tile dispenser;
+            public float buildSpeed;
         }
 
         public Map mapData;
@@ -33,6 +38,7 @@ namespace Data
         {
             Debug.Log("Map Dimension -> " + mapData.dimension.height + " , " + mapData.dimension.width);
             Debug.Log("Map tile -> " + mapData.tile.prefab.name + " - " + mapData.tile.size);
+            Debug.Log("Map build speed -> " + mapData.buildSpeed);
         }
     }
 }

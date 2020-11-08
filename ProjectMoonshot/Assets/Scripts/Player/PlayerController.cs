@@ -5,7 +5,7 @@ namespace Player
 {
     public enum PlayerType { PlayerOne, PlayerTwo, AI }
 
-    public class MovementController : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         public float speed;
         public Transform character;
@@ -39,6 +39,11 @@ namespace Player
         {
             _movement.FaceDirection();
             _rigidbody.MovePosition(transform.position + _movement.Direction() * Time.deltaTime);
+        }
+
+        private void LateUpdate()
+        {
+            
         }
     }
 }

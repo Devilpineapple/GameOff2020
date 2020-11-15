@@ -24,6 +24,12 @@ public class SectionController : MonoBehaviour
         SetCamera(dimension, x);
         SetTerrainCenter(dimension);
     }
+    
+    public void Setup(MapData.Map.Dimension dimension)
+    {
+        // SetCamera(dimension, x);
+        SetTerrainCenter(dimension);
+    }
 
     public void MoveCamera(float fov, Vector2 position, float duration, TweenCallback callback = null)
     {
@@ -40,8 +46,8 @@ public class SectionController : MonoBehaviour
     {
         // cam.GetComponent<CameraController>().minXPosition = -(dimension.width / 7.5f);
         // cam.GetComponent<CameraController>().maxXPosition = (dimension.width / 5);
-        cam.DORect(new Rect(x, 0, 1f, 1f), 0f);
-        cam.transform.localPosition = new Vector3(dimension.width / 2, cam.transform.position.y, -dimension.height / 2);
+        // cam.DORect(new Rect(x, 0, 1f, 1f), 0f);
+        cam.transform.localPosition = new Vector3(dimension.width / 2, dimension.height, -dimension.height / 2);
     }
 
     private void SetTerrainCenter(MapData.Map.Dimension dimension) => terrain.localPosition = new Vector3(dimension.width / 2, 0f, -dimension.height / 2);

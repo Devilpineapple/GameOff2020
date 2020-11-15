@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Data;
 using DG.Tweening;
 using Player;
@@ -12,20 +11,13 @@ public class SectionController : MonoBehaviour
     public List<GameObject> tiles = new List<GameObject>();
     public PlayerController player;
 
-    private Rect originCamRect;
-
-    private void Awake()
-    {
-        originCamRect = cam.rect;
-    }
-
-    public void Setup(MapData.Map.Dimension dimension, float x)
+    public void Setup(MapData.Dimension dimension, float x)
     {
         SetCamera(dimension, x);
         SetTerrainCenter(dimension);
     }
     
-    public void Setup(MapData.Map.Dimension dimension)
+    public void Setup(MapData.Dimension dimension)
     {
         // SetCamera(dimension, x);
         SetTerrainCenter(dimension);
@@ -37,18 +29,17 @@ public class SectionController : MonoBehaviour
         cam.transform.DOMove(new Vector3(position.x, cam.transform.localPosition.y, position.y), duration).OnComplete(callback);
     }
 
-    public void ShowCamera(TweenCallback callback)
+    public void EnablePlayer()
     {
-        cam.DORect(originCamRect, 0).OnComplete(callback);
+        var position = terrain.position;
+        player.transform.position = new Vector3(position.x, position.y + 1, position.z);
+        player.gameObject.SetActive(true);
     }
-    
-    private void SetCamera(MapData.Map.Dimension dimension, float x)
+
+    private void SetCamera(MapData.Dimension dimension, float x)
     {
-        // cam.GetComponent<CameraController>().minXPosition = -(dimension.width / 7.5f);
-        // cam.GetComponent<CameraController>().maxXPosition = (dimension.width / 5);
-        // cam.DORect(new Rect(x, 0, 1f, 1f), 0f);
         cam.transform.localPosition = new Vector3(dimension.width / 2, dimension.height, -dimension.height / 2);
     }
 
-    private void SetTerrainCenter(MapData.Map.Dimension dimension) => terrain.localPosition = new Vector3(dimension.width / 2, 0f, -dimension.height / 2);
+    private void SetTerrainCenter(MapData.Dimension dimension) => terrain.localPosition = new Vector3(-transform.position.x / 2, 0f, -dimension.height / 4);
 }

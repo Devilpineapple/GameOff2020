@@ -16,24 +16,13 @@ MonoBehaviour:
     dimension:
       height: 22
       width: 8
-    tile:
-      prefab: {fileID: 8178653846785761621, guid: dd2f2445f3feb3a4dbf7909c59059b60,
-        type: 3}
-      size: 1
-    wall:
-      prefab: {fileID: 2765421251311497551, guid: d5f28f1f43983eb4da125bcc4fcd8db5,
-        type: 3}
-      size: 1
-    conveyorBelt:
-      prefab: {fileID: 4889776466608416877, guid: 173dafe63063c514cb2bb71b1e8028f0,
-        type: 3}
-      size: 1
-    voidPlatform:
-      prefab: {fileID: 1896689144961039108, guid: bb0e619139f389f48b3e7641b074d11a,
-        type: 3}
-      size: 1
-    dispenser:
-      prefab: {fileID: 8346627114089985381, guid: 8ebe88d6000d94249b34f82408a54e99,
-        type: 3}
+    tiles:
+      types:
+      - {fileID: 1896689144961039108, guid: bb0e619139f389f48b3e7641b074d11a, type: 3}
+      - {fileID: 8346627114089985381, guid: 8ebe88d6000d94249b34f82408a54e99, type: 3}
+      - {fileID: 4889776466608416877, guid: 173dafe63063c514cb2bb71b1e8028f0, type: 3}
+      - {fileID: 2765421251311497551, guid: d5f28f1f43983eb4da125bcc4fcd8db5, type: 3}
+      - {fileID: 8178653846785761621, guid: dd2f2445f3feb3a4dbf7909c59059b60, type: 3}
       size: 1
     buildSpeed: 0.0015
+    buildType: 1

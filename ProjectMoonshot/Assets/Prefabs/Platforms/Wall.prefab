@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 9021999497210413775}
   - component: {fileID: 6096929877425922612}
   m_Layer: 0
-  m_Name: WallPlatform
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9021999497210413775
 Transform:
@@ -126,6 +126,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: wallPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c57ad71e86f9484489e6aab9efb633e7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c57ad71e86f9484489e6aab9efb633e7, type: 3}

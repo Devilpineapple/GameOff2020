@@ -15,7 +15,7 @@ MonoBehaviour:
   mapData:
     dimension:
       height: 22
-      width: 12
+      width: 8
     tile:
       prefab: {fileID: 8178653846785761621, guid: dd2f2445f3feb3a4dbf7909c59059b60,
         type: 3}
@@ -36,4 +36,4 @@ MonoBehaviour:
       prefab: {fileID: 8346627114089985381, guid: 8ebe88d6000d94249b34f82408a54e99,
         type: 3}
       size: 1
-    buildSpeed: 0.025
+    buildSpeed: 0.0015

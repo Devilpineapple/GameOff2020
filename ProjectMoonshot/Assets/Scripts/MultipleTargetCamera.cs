@@ -59,7 +59,7 @@ public class MultipleTargetCamera : MonoBehaviour
         return bounds.center;
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(_b.center, _b.size);

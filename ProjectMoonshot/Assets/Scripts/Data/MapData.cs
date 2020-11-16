@@ -7,13 +7,8 @@ namespace Data
     [CreateAssetMenu(fileName = "New Map Settings", menuName = "Data/Map Settings")]
     public class MapData : ScriptableObject
     {
-        // public enum TileType { Trash, Dispenser, ConveyorBelt, Wall, Ground }
-
         #region Dimension
-        
-        /// <summary>
-        /// Contains the Grid's dimension
-        /// </summary>
+
         [Serializable]
         public struct Dimension
         {

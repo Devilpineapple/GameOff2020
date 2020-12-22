@@ -1,14 +1,21 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
-    private Rigidbody _rigidbody;
+    public GameObject item;
+    private Rigidbody _rb;
 
-    private void Awake() => _rigidbody = GetComponent<Rigidbody>();
+    #region Events
+
+    private void Awake() => _rb = GetComponent<Rigidbody>();
 
     private void Start()
     {
-        _rigidbody.velocity = transform.forward * 5f;
+        item.transform.DOScale(new Vector3(0.5f, 0.5f, 0.5f), 1f);
+        _rb.velocity = transform.forward * 5f;
         Physics.IgnoreLayerCollision(8, 9);
     }
+    
+    #endregion
 }

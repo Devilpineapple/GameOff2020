@@ -25,8 +25,8 @@ public class LevelController : MonoBehaviour
         teamAManager.SpawnItemPool();
         teamBManager.SpawnItemPool();
         yield return new WaitForSeconds(0.5f);
-        teamAManager.EnablePlayer();
-        teamBManager.EnablePlayer();
+        teamAManager.SpawnPlayer();
+        teamBManager.SpawnPlayer();
         cam.GetComponent<MultipleTargetCamera>().enabled = true;
     }
 }

@@ -15,7 +15,6 @@ namespace Platform
         {
             var prefab = objects[Random.Range(0, objects.Length)];
             Instantiate(prefab, spawnPosition.position, Quaternion.identity);
-            // Debug.Log(objects[Random.Range(0, objects.Length)].name);
         }
 
         private void Update()

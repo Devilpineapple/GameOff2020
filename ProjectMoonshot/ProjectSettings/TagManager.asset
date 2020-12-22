@@ -9,6 +9,7 @@ TagManager:
   - Item
   - Dispenser
   - ConveyorBelt
+  - CraftingTable
   layers:
   - Default
   - TransparentFX
